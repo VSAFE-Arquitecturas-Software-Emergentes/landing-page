@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="VSafe permite comparar recorridos a pie en Lima considerando tiempo, distancia e información de incidentes reportados."
+    />
+    <meta name="theme-color" content="#123b46" />
+    <title>VSafe | Antes de salir, conoce tu recorrido</title>
+  </head>
+  <body>
+    <header class="header">
+      <a class="brand" href="#inicio"
+        ><svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m12 3-8 3v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z" />
+          <path d="m8 12 3 3 5-6" /></svg
+        >VSafe</a
+      >
+      <nav aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a><a href="#informacion">Tu información</a
+        ><a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="header-actions">
+        <button id="language" aria-label="Switch to English">EN</button
+        ><a class="button app-link" href="http://localhost:5173"
+          >Explorar rutas <span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="location"><span></span>Lima, a pie</p>
+          <h1>Antes de salir,<br />conoce tu recorrido.</h1>
+          <p class="lead">
+            El tiempo no lo cuenta todo. Compara tus alternativas con información sobre los
+            incidentes reportados en el camino.
+          </p>
+          <a href="http://localhost:5173" class="button app-link"
+            >Comparar mi recorrido <span aria-hidden="true">↗</span></a
+          >
+          <p class="small-note">Sin crear una cuenta. Tú eliges cuándo compartir tu ubicación.</p>
+          <div class="hero-foot">
+            <span class="foot-line"></span>
+            <p>Más contexto para decidir.<br />La última palabra siempre es tuya.</p>
+          </div>
+        </div>
+        <div
+          class="hero-map"
+          role="img"
+          aria-label="Ilustración de dos alternativas de recorrido a pie, no representa información de riesgo real"
+        >
+          <svg viewBox="0 0 610 610" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern
+                id="blocks"
+                width="96"
+                height="96"
+                patternTransform="rotate(-17)"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect width="96" height="96" fill="#ecf0eb" />
+                <rect x="7" y="7" width="77" height="77" rx="8" fill="#fafbf8" />
+                <path d="M0 92h96M92 0v96" stroke="#d9e0d9" stroke-width="2" />
+              </pattern>
+            </defs>
+            <rect width="610" height="610" fill="url(#blocks)" />
+            <path d="M0 400Q120 435 160 610H0Z" fill="#b9d8dc" />
+            <path d="M20 403Q160 458 176 610" stroke="#fff" stroke-width="13" fill="none" />
+            <rect
+              x="120"
+              y="80"
+              width="110"
+              height="165"
+              rx="40"
+              transform="rotate(-17 120 80)"
+              fill="#d5e4c9"
+            />
+            <rect
+              x="435"
+              y="355"
+              width="140"
+              height="90"
+              rx="24"
+              transform="rotate(-17 435 355)"
+              fill="#d5e4c9"
+            />
+            <path
+              d="m185 392 110-38-38-125 151-48"
+              stroke="#fff"
+              stroke-width="15"
+              fill="none"
+              stroke-linejoin="round"
+            />
+            <path
+              d="m185 392 110-38-38-125 151-48"
+              stroke="#128b86"
+              stroke-width="7"
+              fill="none"
+              stroke-linejoin="round"
+            />
+            <path
+              d="m185 392 238-77-44-137"
+              stroke="#fff"
+              stroke-width="12"
+              fill="none"
+              stroke-linejoin="round"
+            />
+            <path
+              d="m185 392 238-77-44-137"
+              stroke="#d8945d"
+              stroke-width="5"
+              stroke-dasharray="10 7"
+              fill="none"
+              stroke-linejoin="round"
+            />
+            <circle cx="185" cy="392" r="15" fill="#128b86" stroke="#fff" stroke-width="5" />
+            <circle cx="408" cy="181" r="15" fill="#d8945d" stroke="#fff" stroke-width="5" />
+            <text
+              x="250"
+              y="117"
+              fill="#7b9084"
+              font-family="sans-serif"
+              font-size="13"
+              transform="rotate(-17 250 117)"
+            >
+              Miraflores
+            </text>
+            <text
+              x="62"
+              y="515"
+              fill="#6b9aa6"
+              font-family="sans-serif"
+              font-size="12"
+              transform="rotate(42 62 515)"
+            >
+              Océano Pacífico
+            </text>
+          </svg>
+          <div class="map-label"><span></span>Una caminata. Diferentes posibilidades.</div>
+          <div class="map-note">
+            <span class="route-icon">⌁</span>
+            <div>
+              <strong>Elige con más información</strong>
+              <p>Tiempo, distancia y contexto.</p>
+            </div>
+          </div>
+          <span class="illustration-caption">Ilustración de recorrido</span>
+        </div>
+      </section>
+      <section id="como-funciona" class="how-section">
+        <div class="section-heading">
+          <h2>Un recorrido que empieza<br />con una buena decisión.</h2>
+          <p>
+            Desde elegir el destino hasta revisar un cambio en el camino, mantén el control de tu
+            recorrido.
+          </p>
+        </div>
+        <div class="steps">
+          <article>
+            <span class="step-number">1</span>
+            <h3>Elige tus puntos</h3>
+            <p>
+              Define desde dónde sales y a dónde quieres llegar. Puedes ingresarlos sin compartir tu
+              ubicación actual.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">2</span>
+            <h3>Compara con contexto</h3>
+            <p>
+              Revisa duración, distancia, reportes cercanos y la cobertura de la información
+              disponible.
+            </p>
+          </article>
+          <article>
+            <span class="step-number">3</span>
+            <h3>Camina a tu manera</h3>
+            <p>
+              Activa el recorrido para recibir alertas en la aplicación. Una alerta te informa; tú
+              decides si cambias de ruta.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="informacion" class="privacy-section">
+        <div>
+          <span class="privacy-icon"
+            ><svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m12 3-8 3v6c0 4 4 7 8 9 4-2 8-5 8-9V6l-8-3Z" />
+              <path d="m8 12 3 3 5-6" /></svg
+          ></span>
+          <h2>Tu ubicación tiene<br />un propósito. Y un límite.</h2>
+          <p>
+            VSafe utiliza la información necesaria para el recorrido activo. Puedes detener su uso
+            en cualquier momento.
+          </p>
+        </div>
+        <div class="privacy-facts">
+          <article>
+            <h3>Tu historial se queda contigo</h3>
+            <p>
+              Es optativo y se guarda en tu navegador: hasta 20 consultas durante siete días. Puedes
+              borrarlo cuando quieras.
+            </p>
+          </article>
+          <article>
+            <h3>Los reportes tienen contexto</h3>
+            <p>
+              Un reporte de la comunidad no confirma que el hecho haya ocurrido. Siempre
+              distinguimos observación, estimación e información insuficiente.
+            </p>
+          </article>
+          <article>
+            <h3>Las rutas no prometen seguridad</h3>
+            <p>
+              Comparamos las alternativas disponibles. Las estimaciones dependen de la cobertura y
+              vigencia de los datos.
+            </p>
+          </article>
+        </div>
+      </section>
+      <section id="preguntas" class="faq-section">
+        <h2>Antes de dar el primer paso.</h2>
+        <details>
+          <summary>¿VSafe garantiza una ruta segura?</summary>
+          <p>
+            No. VSafe ofrece contexto para comparar alternativas; ningún recorrido garantiza
+            seguridad. Cuando no hay datos suficientes, la aplicación lo indica.
+          </p>
+        </details>
+        <details>
+          <summary>¿Necesito crear una cuenta?</summary>
+          <p>
+            El MVP utiliza una sesión anónima en tu navegador. Puedes consultar rutas y contribuir
+            con reportes sin registro.
+          </p>
+        </details>
+        <details>
+          <summary>¿Las alertas funcionan con la aplicación cerrada?</summary>
+          <p>
+            Las alertas requieren un recorrido activo y la aplicación visible y conectada. No
+            funcionan como un servicio de emergencias.
+          </p>
+        </details>
+        <details>
+          <summary>¿Qué significa que esté en modo demo?</summary>
+          <p>
+            Es una demostración académica con rutas, incidentes y estimaciones sintéticos. Esos
+            datos no describen la seguridad real de Lima.
+          </p>
+        </details>
+      </section>
+      <section class="final-cta">
+        <div>
+          <h2>Tu siguiente paso,<br />con más contexto.</h2>
+          <p>Empieza por comparar un recorrido.</p>
+        </div>
+        <a class="button app-link" href="http://localhost:5173"
+          >Explorar VSafe <span aria-hidden="true">↗</span></a
+        >
+      </section>
+    </main>
+    <footer>
+      <a href="#inicio" class="brand">VSafe</a>
+      <p>Proyecto académico de Ingeniería de Software · UPC</p>
+      <a href="#informacion">Privacidad y uso de datos</a>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
